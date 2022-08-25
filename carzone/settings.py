@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # Local
     'pages.apps.PagesConfig',
     'cars.apps.CarsConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
