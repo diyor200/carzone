@@ -1,0 +1,20 @@
+{% if messages %}
+    {% for message in messages %}
+        <div id="message" class="contains">
+            <div class="alert alert-{{ message.tags }}" alert-dismissible role="alert">
+                <button class="close" type="button" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <strong>
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                        Error:
+                    {% else %}
+                        {{ message.tags  }}
+                    {% endif %}
+                </strong>
+            {{ message }}
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}
+{#005 Implement django messages 4:35#}
